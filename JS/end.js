@@ -22,7 +22,7 @@ saveHighScore = e => {
     }
 
     highScores.push(score)
-    
+
     highScores.sort((a,b,) => {
         return b.score - a.score
     })
@@ -33,5 +33,8 @@ saveHighScore = e => {
     localStorage.setItem('highScores', JSON.stringify(highScores))
     window.location.assign('/HTML/highscores.html')
 
+    /*
+    fixed path for window.location.assign to take you to highscores page
+    */
 
 }
