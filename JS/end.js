@@ -22,7 +22,7 @@ saveHighScore = e => {
     }
 
     highScores.push(score)
-
+    
     highScores.sort((a,b,) => {
         return b.score - a.score
     })
