@@ -11,39 +11,39 @@ let questionCounter = 0
 let availableQuestions = []
 
 
-//edited question & answer test data to prep for entering real data
+/* added real data to questions & choices */
 let questions = [
     {
-        question: "Question 1",
-        choice1: "1",
-        choice2: "2",
-        choice3: "3",
-        choice4: "4",
-        answer: 1,
-    },
-    {
-        question: "Question 2",
-        choice1: "5",
-        choice2: "6",
-        choice3: "7",
-        choice4: "8",
+        question: "A sales ops user has been identified as the dashboards expert within Cloud Kicks. This user needs to be able to update dashboard folder access for all non-private folders. Which permission should the administrator assign to the user?",
+        choice1: "Manage reports in public folders",
+        choice2: "Manage dashboards in public folders",
+        choice3: "Create dashboard folders",
+        choice4: "Create and customize dashboards",
         answer: 2,
     },
     {
-        question: "Question 3",
-        choice1: "9",
-        choice2: "10",
-        choice3: "11",
-        choice4: "12",
-        answer: 3,
+        question: "A Sales executive at Universal Containers (UC) is utilizing Collaborative Forecasting to track sales rep quote attainment and wants to be alerted when an opportunity stage is moved backward In the sales process. Which feature should the administrator use to fulfill this request? ",
+        choice1: "Validation Rule",
+        choice2: "Workflow Rule",
+        choice3: "Big Deal Alert",
+        choice4: "Field History Tracking Report",
+        answer: 2,
     },
     {
-        question: "Question 4",
-        choice1: "13",
-        choice2: "14",
-        choice3: "15",
-        choice4: "16",
-        answer: 4,
+        question: "Sales users at Cloud Kicks are requesting that the data in the Industry field on the Account object displays on the Opportunity page layout. Which type of field should an administrator create to accomplish this?",
+        choice1: "Cross-object formula field",
+        choice2: "Custom Account field",
+        choice3: "Standard Account field",
+        choice4: "Master-detail relationship field",
+        answer: 1,
+    },
+    {
+        question: "Users at Universal Containers have reported that the related lists on the Lightning record page for Accounts are showing only four fields. They would like more fields to be visible. Which customization should an administrator use to allow for up to ten fields on related lists?",
+        choice1: "Change the related list type to custom",
+        choice2: "Change the related list type to default",
+        choice3: "Change the related list type to enhanced list",
+        choice4: "Change the related list type to list view",
+        answer: 3,
     }
 ]
 
@@ -75,7 +75,7 @@ getNewQuestion = () => {
 
     choices.forEach(choice => {
         const number = choice.dataset['number']
-        choice.innerText = currentQuestion['choice' + number] //fixed choice population error by changing "choice.innerTex" to "choice.innerText" lmao
+        choice.innerText = currentQuestion['choice' + number]
     })
 
     availableQuestions.splice(questionsIndex, 1)
