@@ -65,8 +65,8 @@ getNewQuestion = () => {
 
     questionCounter++
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
-    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%` //fixed backticks for template literals
-
+    progressBarFull.style.width = `${((questionCounter/MAX_QUESTIONS) - .25) * 100}%` //fixed backticks for template literals
+                                                                                      //added (-.25) to fix progress bar 
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionsIndex]
     question.innerText = currentQuestion.question
