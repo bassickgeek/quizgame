@@ -10,38 +10,40 @@ let score = 0
 let questionCounter = 0
 let availableQuestions = []
 
+
+//edited question & answer test data to prep for entering real data
 let questions = [
     {
-        question: 'Test Question',
-        choice1: '2',
-        choice2: '4',
-        choice3: '21',
-        choice4: '17',
+        question: "Question 1",
+        choice1: "1",
+        choice2: "2",
+        choice3: "3",
+        choice4: "4",
+        answer: 1,
+    },
+    {
+        question: "Question 2",
+        choice1: "5",
+        choice2: "6",
+        choice3: "7",
+        choice4: "8",
         answer: 2,
     },
     {
-        question: 'What is 2 + 2?',
-        choice1: '2',
-        choice2: '4',
-        choice3: '21',
-        choice4: '17',
-        answer: 2,
+        question: "Question 3",
+        choice1: "9",
+        choice2: "10",
+        choice3: "11",
+        choice4: "12",
+        answer: 3,
     },
     {
-        question: 'What is 2 + 2?',
-        choice1: '2',
-        choice2: '4',
-        choice3: '21',
-        choice4: '17',
-        answer: 2,
-    },
-    {
-        question: 'What is 2 + 2?',
-        choice1: '2',
-        choice2: '4',
-        choice3: '21',
-        choice4: '17',
-        answer: 2,
+        question: "Question 4",
+        choice1: "13",
+        choice2: "14",
+        choice3: "15",
+        choice4: "16",
+        answer: 4,
     }
 ]
 
@@ -66,14 +68,14 @@ getNewQuestion = () => {
     questionCounter++
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
     progressBarFull.style.width = `${((questionCounter/MAX_QUESTIONS) - .25) * 100}%` //fixed backticks for template literals
-                                                                                      //added (-.25) to fix progress bar 
+
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionsIndex]
     question.innerText = currentQuestion.question
 
     choices.forEach(choice => {
         const number = choice.dataset['number']
-        choice.innerTex = currentQuestion ['choice' + number]
+        choice.innerText = currentQuestion['choice' + number] //fixed choice population error by changing "choice.innerTex" to "choice.innerText" lmao
     })
 
     availableQuestions.splice(questionsIndex, 1)
