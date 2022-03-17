@@ -13,7 +13,7 @@
 }
 
 h1 {
-    font-size: 5.4rem;
+    font-size: 2.4rem; /* reduced font size so questions fit better in viewport */
     color: #fff;
     margin-bottom: 5rem;
 }
@@ -120,7 +120,7 @@ input::placeholder {
 #username {
     margin-bottom: 3rem;
     width: 100%;
-    outline: none;
+    outline: none; 
 }
 
 #end-text {
