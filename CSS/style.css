@@ -111,10 +111,14 @@ input {
     font-size: 1.8rem;
     border: none;
     box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    text-align: center;
+    /* text-align here makes the name being typed in centered, I think it looks good */
 }
 
-input::placeholder {
+input[type="text"]::placeholder {
     color: #aaa;
+    text-align: center; 
+    /* this is stupid bullshit that wont work */
 }
 
 #username {
